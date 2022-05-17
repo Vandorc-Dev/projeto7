@@ -25,13 +25,16 @@ module.exports = {
         if(listaErrors.isEmpty()){
             await Usuario.findOne({
                 attributes: ['id', 'email', 'password'],
-                
+                where: {
+                    email: req.body.email,
+                    password: req.body.password,
+                }
             })
 
             if(req.body.email && req.body.password){
                 console.log('usuarios logado com sicesso')
-                logado = req.session
-                res.rendirect('/')
+                res.redirect('/')
+                
             }
         }else{
             return res.render('login', {errors: listaErrors.errors})

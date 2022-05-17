@@ -17,4 +17,7 @@ module.exports = {
     produtos: (req, res) => {
         res.render("teste", { nome: "teste" });
     },
+    editar: async (req, res)=>{
+        Produto.findOne()
+    }
 }

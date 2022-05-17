@@ -37,6 +37,8 @@ router.post('/create', upload.single('image'),async function (req, res, next) {
     res.render('cadastro_produtos');
 });
 
+
+router.put('/:id/editar', Produto.findOne)
 //aulascontrollers
 // router.post('/cadastro_produtos/criar', ProdutoController.index);
 //router.get('\ deletar', ProdutoController, deletarProduto);

@@ -73,13 +73,7 @@ body{
 
 
 /*mains*/
-main{
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
 
-}
 
 /*footer*/
 footer{
@@ -210,8 +204,6 @@ a:hover{
     text-align: center;
 }
 
-
-<<<<<<< HEAD
 .contato{
     margin-top: 150px;
     width: 100%;
@@ -231,9 +223,16 @@ a:hover{
 
 .container form input{
     margin-bottom: 20px;
+}
 
-=======
+.produts{
+    width: 100%;
+}
 
+.produts ul{
+    width: 100%;
+    padding: 50px;
+}
 
 @media(max-width: 600px) 
 { 
@@ -254,17 +253,18 @@ a:hover{
     }
 
     .search {
-        width:100
+        width:60%;
     }
 
     #topo {
         display:flex;
         flex-direction: column;
-
     }
-
+    .logo{
+        margin-left: 20px;
+        transform: scale(0.5);
+    }
     #campo-busca{
         width:100%;
     }
->>>>>>> 21efbfd819499a269a41d352eb543fe97a583fbc
 }
