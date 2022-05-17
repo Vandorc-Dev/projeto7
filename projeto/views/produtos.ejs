@@ -1,0 +1,36 @@
+<%- include('./partials/head.ejs') %>
+
+    <body>
+        <%- include('./partials/header.ejs') %>
+
+            <main>
+
+                <div class="listarProdutos">
+                    <h1>Listar produtos</h1>
+                    <ul>
+                        <% produtos.forEach(function(produtos) { %>
+                            <li> Nome:
+                                <%= produtos.nome %> %></li>
+                            <li> Fornecedor:
+                                <%= produtos.Fornecedores_id %> %></li>
+                            <li> Descrição:
+                                <%= produtos.descricao %> %></li>
+<<<<<<< HEAD
+                            <li> Valor:
+                                 R$ <%= produtos.valor%> %></li>
+=======
+                            <li> Valor: R$
+                                <%= produtos.valor%> %></li>
+                            <a href="../views/admin/editar-produto.ejs">Editar</a>
+                            <button>Remover</button>
+
+>>>>>>> 21efbfd819499a269a41d352eb543fe97a583fbc
+                            <% }); %>
+                    </ul>
+                </div>
+
+            </main>
+            <%- include('./partials/footer.ejs') %>
+    </body>
+
+    </html>

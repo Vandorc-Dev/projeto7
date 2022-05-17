@@ -1,0 +1,34 @@
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+  <%- include('./partials/header.ejs') %>
+
+  <div id="form-user">
+    <form method="POST" action="" >
+      <% if(typeof(errors) != "undefined"){ %>
+        <p style="color: red">ERROR</p>
+        <ul>
+          <% errors.forEach((error)=>{ %>
+            <li><%= error.msg %> </li>
+        <% }) %>
+        </ul>
+      <% } %>
+      <h1>Fazer login</h1>
+      <label for="fornecedor">Email</label>
+      <input type="email" id="email" name="email">
+  
+      <label for="descricao">Senha</label>
+      <input type="password" id="password" name="password">
+  
+      <hr/>
+      <button type="submit" class="btn btn-primary">Entrar</button>
+      <button><a href="/usuario">Cadastra-se</a></button>
+  </form>
+  </div>
+
+
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>

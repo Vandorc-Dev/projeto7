@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+/*Header*/
+
+#topo{
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: rgb(68, 126, 253) 2px solid;
+    margin-bottom: 10px;
+    position: fixed;
+    z-index: 20;
+}
+
+.logo{
+    margin-left: 34px;
+    transform: scale(0.8);
+}
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 40%;
+    padding: 5px;
+    border-radius: 8px;
+    border: solid 2px rgb(94, 94, 241);
+    font-size: 18px;
+}
+
+.nav-right{
+    display: flex;
+    margin-right: 60px;
+}
+
+.nav-right li, a{
+    text-decoration: none;
+    list-style: none;
+    color: rgb(27, 7, 7);
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+}
+
+.nav-right li a:hover{
+    border-bottom: solid 3px cornflowerblue;
+}
+
+.nav-right li{
+    margin-left: 25px;
+}
+
+#campo-busca{
+    border: none;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+
+/*mains*/
+main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+
+}
+
+/*footer*/
+footer{
+    display: flex;
+    width: 100%;
+    height: 190px;
+    background-color: cornflowerblue;
+    justify-content: space-between ;
+    padding: 0px 20px;
+    align-items: center;
+
+
+}
+
+/*footer ainda*/ .boxs {
+    width: 320px ;
+    min-height: 150px;
+    padding: 20px;
+
+}
+/*footer ainda*/ boxs:nth-child(4){
+    width: 400px;
+
+}
+/*footer ainda*/ .boxs h2{
+    color:white;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+/*footer ainda*/ .boxs ul li {
+    margin: 10px 0px;
+    list-style: none;
+}
+/*footer ainda*/ .boxs ul li a {
+    color:whitesmoke;
+    text-decoration: none;
+}
+/*footer ainda*/ .boxs ul li a:hover{
+    color:grey;
+    text-decoration: none;
+}
+/*footer ainda*/ .boxs p {
+    color: whitesmoke;
+    text-align: justify;
+}
+
+.payments-card{
+    align-items: center;
+    width: 26vw;
+}
+
+
+#footer-cards{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#footer-cards .card{
+    width: 24%;
+    height: 140px;
+    border: solid 1px rgb(68, 126, 253);
+}
+a:hover{
+    color:grey 
+ }
+
+/* Carrinho */
+.form-login{
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    flex-direction: column;
+    width: 30%;
+    height: 400px;
+    margin: auto;
+    color: red;
+    border: solid 1px rgb(77, 116, 245);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    background-color: rgb(233, 233, 233);
+}
+
+.form-login form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+.form-login input{
+    margin-top: 10px;
+    width: 70%;
+    color: rgb(66, 66, 247);
+    font-size: 18px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.form-login .submit{
+    width: 70%;
+    border-radius: 4px;
+}
+
+#form-user form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 20px;
+    width: 50%;
+    height: 80vh;
+    font-size: 18px;
+    justify-content: center;
+
+}
+
+
+.listarProdutos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+
+<<<<<<< HEAD
+.contato{
+    margin-top: 150px;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+   text-align: center;
+}
+
+.container form{
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container form input{
+    margin-bottom: 20px;
+
+=======
+
+
+@media(max-width: 600px) 
+{ 
+    footer {
+        
+        min-height: 250px;
+        background: cornflowerblue;
+        display: flex;
+        flex-direction: column;
+        height: 510px;
+    }
+    footer .boxs {
+       width:100%; 
+       text-align: center;
+    }
+    footer .boxs:nth-child(4) {
+        width:100%;
+    }
+
+    .search {
+        width:100
+    }
+
+    #topo {
+        display:flex;
+        flex-direction: column;
+
+    }
+
+    #campo-busca{
+        width:100%;
+    }
+>>>>>>> 21efbfd819499a269a41d352eb543fe97a583fbc
+}
