@@ -46,6 +46,7 @@ a {
     height:80px;
     background: #244d6e;
     color: #eee;
+    position: fixed;
 }
 
 #navbar-container {
@@ -74,7 +75,7 @@ a {
 /*showcase*/ 
 
 #showcase {
-    height:95vh;
+    height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
