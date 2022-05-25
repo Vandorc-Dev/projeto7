@@ -79,14 +79,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: darkgray;
-    background: #fbfbf8;
+    color: #25221e;
+    background: #4fa7f0; 
 
 
     /*overlay*/
-background-color: #bab8b5(0,0,0,5);
-background-blend-mode: color;
-}
+    background-color: #bab8b5(0,0,0,5);
+    background-blend-mode: color;
+    }
 
 #showcase-container {
 text-align: center;
@@ -105,7 +105,7 @@ text-align: center;
 #produtos {
     width:100%;
     background: #eee;
-    color: black;
+    color: #25221e;
     padding: 50px
 }
 
@@ -159,19 +159,25 @@ font-weight: bold;
 #em-alta-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
 #items {
-    width:600px;
+    width:650px;
 }
 
 #items .item {
     display: flex;
-    padding: 10px;
+    padding: 25px;
     margin: 15px 0; 
     font-size: 1.2rem;
 }
+
+#em-alta-container .gamer{
+width: 300px;
+} 
+
  /*testemunhos*/
 
  .testemunho {
