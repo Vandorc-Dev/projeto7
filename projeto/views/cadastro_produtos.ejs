@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,33 +29,38 @@
         </nav>
     </header>
 
-        <main>
-            <section class="contato">
-                <div class="container">
-                    <h1>Cadastro de Produtos</h1>
+    <main>
+        <section class="contato">
+            <div class="container">
+                <h1>Cadastro de Produtos</h1>
 
-                    <div class="align-row">
-                        <form method="POST" action="/produtos/create" enctype="multipart/form-data">
-                            <label for="nome">Nome Produto</label>
-                            <input type="text" id="nome" name="nome">
+                <div class="align-row">
+                    <form method="POST" action="/produtos/create" enctype="multipart/form-data">
+                        <label for="nome">Nome Produto</label>
+                        <input type="text" id="nome" name="nome">
 
-                            <label for="fornecedor">Nome fornecedor</label>
-                            <input type="nome" id="Fornecedores_id" name="Fornecedores_id">
+                        <label for="fornecedor">Nome fornecedor</label>
+                        <input type="nome" id="Fornecedores_id" name="Fornecedores_id">
 
-                            <label for="descricao">Descrição do produto</label>
-                            <input type="text" id="descricao" name="descricao">
+                        <label for="descricao">Descrição do produto</label>
+                        <input type="text" id="descricao" name="descricao">
 
-                            <label for="valor">Valor do produto</label>
-                            <input type="number" id="valor" name="valor">
-                            <label for="image">Imagem</label>
-                            <input type="file" name="image" id="image" multiple>
-                            <hr/>
-                            <button type="submit" class="btn btn-primary">cadastrar</button>
-                        </form>
-                    </div>
+                        <label for="valor">Valor do produto</label>
+                        <input type="number" id="valor" name="valor">
+                        <label for="image">Imagem</label>
+                        <input type="file" name="image" id="image" multiple>
+                        <hr/>
+                        <form action="/cadastro" method="post">
+                            <input name="nome" type="text" />
+                            <input name="site" type="url" />
+                            <input type="submit" value="Enviar" />
+                        </form>button>
+                    </form>
                 </div>
-            </section>
-        </main>
-  <%- include('./partials/footer.ejs') %>
+            </div>
+        </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>

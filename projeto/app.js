@@ -7,6 +7,7 @@ var app = express();
 let { check, validationResult, body } = require('express-validator');
 let session = require('express-session');
 
+
 //let bcrypt = require('bcrypt')
 
 // view engine setup
@@ -19,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({secret: 'projeto7', resave: true, saveUninitialized: true}));
+app.use(session({ secret: 'projeto7', resave: true, saveUninitialized: true }));
 
 
 app.use('/', require('./routes/index'));
