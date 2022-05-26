@@ -79,12 +79,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #25221e;
-    background: #4fa7f0; 
+    color: whitesmoke;
+    background: url('/img/tecnologia.jpg') no-repeat center center/cover; 
 
 
     /*overlay*/
-    background-color: #bab8b5(0,0,0,5);
+    background-color: rgba(0,0,0,0.5);
     background-blend-mode: color;
     }
 
@@ -153,7 +153,8 @@ font-weight: bold;
 /*em-alta*/
 #em-alta {
     width:100%;
-    padding:50px
+    padding:50px;
+    color:#25221e
 }
 
 #em-alta-container {
@@ -165,6 +166,16 @@ font-weight: bold;
 
 #items {
     width:650px;
+    padding-top: 20px;
+    display: flex; 
+     align-items: center;
+     font-size: 1.2rem;
+     background: #5998cc;
+     padding: 15px;
+     margin: 15px 0;
+     border-radius: 5px;
+     color: #eee;
+     box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
 }
 
 #items .item {
