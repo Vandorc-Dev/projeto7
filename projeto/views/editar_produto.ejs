@@ -24,21 +24,26 @@
     <section id="prod-cadastro">
         <div>
             <h1>Cadastro de Produtos</h1>
-            <div id="form-user">
-                <form method="POST" action="/usuario/create" >
-                    <h2>Cadastro de usuário</h2>
-                    <label for="nome">Nome usuario</label>
-                    <input type="text" id="nome" name="nome">
-                
-                    <label for="fornecedor">Email</label>
-                    <input type="email" id="email" name="email">
-                
-                    <label for="descricao">Senha</label>
-                    <input type="password" id="password" name="password">
-                
-                    <hr/>
-                    <button type="submit" class="btn btn-primary">cadastrar</button>
-                </form>   
+            <div class="align-row">
+                <form method="POST" action="/produtos/editar/<%= produto.id%>?_method=PUT">
+                    <label for="nome">Produto</label>
+                    <input type="text" id="nome" name="nome" value="<%= produto.nome%>">
+
+                    <label for="fornecedor">Marca</label>
+                    <input type="nome" id="Fornecedores_id" name="marca" value="<%= produto.marca%>">
+
+                    <label for="descricao">Descrição</label>
+                    <input type="text" id="descricao" name="descricao" value="<%= produto.descricao%>">
+
+                    <label for="valor">Preço</label>
+                    <input type="number" id="valor" name="valor"  value="<%= produto.valor%>">
+        
+                    <hr>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+                <form method="POST" action="/produtos/deletar/<%= produto.id%>?_method=DELETE">
+<button type="submit">delete</button>
+                </form>
             </div>
         </div>
     </section>
@@ -97,6 +102,12 @@
     <a href=""><img src="/img/prod1.jpg" alt="" class="gallery-image"></a>
     <a href=""><img src="/img/prod2.jpg" alt="" class="gallery-image"></a>
     <a href=""><img src="/img/prod3.jpg" alt="" class="gallery-image"></a>
+    <a href=""><img src="/img/prod1.jpg" alt="" class="gallery-image"></a>
+    <a href=""><img src="/img/prod2.jpg" alt="" class="gallery-image"></a>
+    <a href=""><img src="/img/dell-monitor.png" alt="" class="gallery-image"></a>
+    <a href=""><img src="/img/dell-pc.png" alt="" class="gallery-image"></a>
+    <a href=""><img src="/img/dell-cpu.jpg" alt="" class="gallery-image"></a>
+    <a href=""><img src="/img/dell-gamer.png" alt="" class="gallery-image"></a>
 </div>
     </section>
 

@@ -6,10 +6,10 @@ module.exports = (connection, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        Fornecedores_id: {
-            type: DataTypes.INTEGER
-        },
         nome: {
+            type: DataTypes.STRING(50)
+        },
+        marca: {
             type: DataTypes.STRING(50)
         },
         descricao: {
@@ -17,31 +17,11 @@ module.exports = (connection, DataTypes) => {
         },
         valor: {
             type: DataTypes.DECIMAL(10, 2)
-        }, 
-        image: {
-            type: DataTypes.STRING(100)
-          },
+        }
     }, {
         timestamps: false,
         tableName: 'produtos'
     })
     model.sync({ alter: true })
-        // model.associate = models => {
-        //     model.belongsTo(models.Categoria, {
-        //         foreignKey: 'categoria_id',
-        //         as: 'categoria'
-        //     })
-
-    //     model.belongsToMany(models.Usuario, {
-    //         through: models.ProdutoFavoritoUsuario,
-    //         foreignKey: 'produto_id',
-    //         as: 'favoritador',
-    //     })
-    //     model.sync({ alter: true })
-    // }
-
-
-
-
     return model
 }

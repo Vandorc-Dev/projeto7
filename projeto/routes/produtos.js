@@ -2,44 +2,34 @@ const express = require('express');
 const router = express.Router();
 const { Produto } = require('../models')
 const ProdutoController = require('../controllers/ProdutoController');
-let multer = require('multer')
+const {multer} = require('../middlewares');
 
 
-//--------------------
-const uploaded = multer({ dest: '../public/uplouds' })
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, '../public/uplouds')
-  },
-  filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-    cb(null, file.fieldname + '-' + uniqueSuffix)
-  }
-})
-
-const upload = multer({ storage: storage })
-//-----------------------------------------
+//Listar produtos
+router.get('/', ProdutoController.listar);
+//Cadastar produtos
 router.get('/cadastro', function (req, res, next) {
-    console.log('Chegou na rota GET /produtos/cadastro');
-    res.render('cadastro_produtos'); // Renderizando Pagina de Cadastro de Produtos
+    res.render('cadastro_produtos'); 
 });
-router.get('/', function (req, res, next) {
-    console.log('Chegou na rota no GET /produtos');
-    Produto.findAll().then(function(produtos){
-        res.render('produtos', {produtos: produtos}) 
-    }); // Renderizando Pagina de Cadastro de Produtos
-});
-router.post('/create', upload.single('image'),async function (req, res, next) {
-    console.log('Chegou na rota POST /cadastro_produtos/create');
-    console.log(JSON.stringify(req.body)); // Imprimindo o Objeto que veio do Formulário
 
-    await ProdutoController.create(req, res, next);// Chamando o Controller para Criar o Produto
+router.post('/create', async function (req, res, next) {
+    console.log(JSON.stringify(req.body)); 
+    await ProdutoController.create(req, res, next);
     res.render('cadastro_produtos');
 });
 
+router.get('/editar/:id', ProdutoController.editar)
+router.put('/editar/:id', ProdutoController.update)
 
-router.put('/:id/editar', Produto.findOne)
-//aulascontrollers
-// router.post('/cadastro_produtos/criar', ProdutoController.index);
-//router.get('\ deletar', ProdutoController, deletarProduto);
+router.delete('/deletar/:id', ProdutoController.deletar)
+
+
 module.exports = router;
+
+/*
+function (req, res, next) {
+    Produto.findAll().then(function(produtos){
+        res.render('produtos', {produtos: produtos}) 
+    }); 
+}
+*/

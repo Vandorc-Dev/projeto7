@@ -22,24 +22,15 @@
     </nav>
     <!-- about -->
     <section id="prod-cadastro">
-        <div>
-            <h1>Cadastro de Produtos</h1>
-            <div id="form-user">
-                <form method="POST" action="/usuario/create" >
-                    <h2>Cadastro de usuário</h2>
-                    <label for="nome">Nome usuario</label>
-                    <input type="text" id="nome" name="nome">
-                
-                    <label for="fornecedor">Email</label>
-                    <input type="email" id="email" name="email">
-                
-                    <label for="descricao">Senha</label>
-                    <input type="password" id="password" name="password">
-                
-                    <hr/>
-                    <button type="submit" class="btn btn-primary">cadastrar</button>
-                </form>   
-            </div>
+        <div class="perfil">
+                <h2>Página de usuario</h2>
+                <hr>
+                <h4>Nome: <%= usuarioPerfil.nome  %> </h4>
+                <h5>E-mail: <%= usuarioPerfil.email %></h5>
+                <button><a href="/usuario/editar/<%= usuarioPerfil.id %>">Editar</a></button>
+                <form action="/usuario/deletar/<%= usuarioPerfil.id %>?_method=DELETE" method="post">
+                    <button type="submit" class="btn btn-primary">Deletar Conta</button>
+                </form>
         </div>
     </section>
 
@@ -119,3 +110,7 @@
 
 </body>
 </html>
+
+
+
+

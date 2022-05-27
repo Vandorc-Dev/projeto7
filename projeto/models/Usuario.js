@@ -14,7 +14,7 @@ module.exports = (connection, DataTypes) => {
             type: DataTypes.STRING(200)
         },
         password: {
-            type: DataTypes.DECIMAL(20)
+            type: DataTypes.STRING(20)
         }
     }, {
         timestamps: false,
